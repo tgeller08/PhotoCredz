@@ -106,7 +106,9 @@ export default function App() {
         <View style={styles.optionsContainer}>
         <View style={styles.optionsRow}>
           <IconButton icon="refresh" label="Reset" onPress={onReset} />
-          <CircleButton onPress={onAddSticker} />
+          <IconButton icon="brush" label="Add Sticker" onPress={onAddSticker} />
+          <IconButton icon="edit" label="Add Credit" onPress={onReset} />
+          {/* <CircleButton onPress={onAddSticker} /> */}
           <IconButton icon="save-alt" label="Save" onPress={onSaveImageAsync} />
         </View>
       </View>

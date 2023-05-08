@@ -1,8 +1,37 @@
-import { Modal, View, Text, Pressable, StyleSheet } from 'react-native';
+import { Modal, View, Text, Pressable, StyleSheet, TextInput, Button} from 'react-native';
+import { useState, useRef } from 'react';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 export default function EmojiPicker({ isVisible, children, onClose }) {
+
+    const [inputText, setInputText] = useState('');
+
+
   return (
+    // <Modal animationType="slide" transparent={true}  visible={isVisible}>
+    //   <View style={styles.modalContent}>
+    //   <Text style={styles.title}>Add A Credit</Text>
+    //   <TextInput
+    //     style={{
+    //         height: 40,
+    //         borderColor: 'gray',
+    //         borderWidth: 1,
+    //         paddingLeft: 10,
+    //         paddingRight: 10,
+    //         borderRadius: 5,
+    //         backgroundColor: 'white',
+    //         color: 'black',
+    //         fontSize: 16,
+    //         fontWeight: 'bold',
+    //       }}
+    //     onChangeText={text => setInputText(text)}
+    //     value={inputText}
+    //     placeholder="Enter text here"
+    //     />
+    //     <Button title="Save" onPress={onClose} />
+    //   </View>
+    // </Modal>
+
     <Modal animationType="slide" transparent={true} visible={isVisible}>
       <View style={styles.modalContent}>
         <View style={styles.titleContainer}>
@@ -40,6 +69,7 @@ const styles = StyleSheet.create({
     title: {
       color: '#fff',
       fontSize: 16,
+      alignItems: 'center',
     },
     pickerContainer: {
       flexDirection: 'row',

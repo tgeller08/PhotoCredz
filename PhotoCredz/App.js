@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, Platform } from 'react-native';
+import { StyleSheet, Text, View, Image, Platform, Alert } from 'react-native';
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { captureRef } from 'react-native-view-shot';
 import domtoimage from 'dom-to-image';
@@ -15,11 +15,13 @@ import IconButton from './components/IconButton';
 import EmojiPicker from "./components/EmojiPicker";
 import EmojiList from './components/EmojiList';
 import EmojiSticker from './components/EmojiSticker';
+import CreditSticker from './components/CreditSticker';
 
 const PlaceholderImage = require('./assets/images/background-image.png');
 
 export default function App() {
-  const [pickedEmoji, setPickedEmoji] = useState(null);
+  const [pickedEmoji, setPickedEmoji] = useState('');
+  const [pickedCredit, setPickedCredit] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [showAppOptions, setShowAppOptions] = useState(false);
@@ -42,11 +44,23 @@ export default function App() {
   };
 
   const onReset = () => {
+    setPickedCredit(null)
+    setPickedEmoji(null)
     setShowAppOptions(false);
   };
 
   const onAddSticker = () => {
     setIsModalVisible(true);
+  };
+
+  const onAddCredit = () => {
+    Alert.prompt(
+      'Who took the photo?',
+      'Please enter the name:',
+      (text) => setPickedCredit(text),
+      undefined,
+      // 'default'
+    );
   };
 
   const onModalClose = () => {
@@ -100,6 +114,7 @@ export default function App() {
           selectedImage={selectedImage}
         />
         {pickedEmoji !== null ? <EmojiSticker imageSize={40} stickerSource={pickedEmoji} /> : null}
+        {pickedCredit !== null ? <CreditSticker imageSize={40} creditSource={pickedCredit} /> : null}
         </View>
       </View>
       {showAppOptions ? (
@@ -107,7 +122,7 @@ export default function App() {
         <View style={styles.optionsRow}>
           <IconButton icon="refresh" label="Reset" onPress={onReset} />
           <IconButton icon="brush" label="Add Sticker" onPress={onAddSticker} />
-          <IconButton icon="edit" label="Add Credit" onPress={onReset} />
+          <IconButton icon="edit" label="Add Credit" onPress={onAddCredit} />
           {/* <CircleButton onPress={onAddSticker} /> */}
           <IconButton icon="save-alt" label="Save" onPress={onSaveImageAsync} />
         </View>

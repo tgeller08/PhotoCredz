@@ -13,7 +13,7 @@ const AnimatedText = Animated.createAnimatedComponent(Text);
 
 const AnimatedView = Animated.createAnimatedComponent(View);
 
-export default function EmojiSticker({ imageSize, stickerSource }) {
+export default function CreditSticker({ imageSize, creditSource }) {
 
     const translateX = useSharedValue(0);
     const translateY = useSharedValue(0);
@@ -60,11 +60,12 @@ export default function EmojiSticker({ imageSize, stickerSource }) {
     <PanGestureHandler onGestureEvent={onDrag}>
     <AnimatedView style={[containerStyle, { top: -350 }]}>
      <TapGestureHandler onGestureEvent={onDoubleTap} numberOfTaps={2}>
-      <AnimatedImage
+      {/* <AnimatedImage
         source={stickerSource}
         resizeMode="contain"
         style={[imageStyle, { width: imageSize, height: imageSize }]}
-      />
+      /> */}
+      <AnimatedText>PhotoCredz: {creditSource}</AnimatedText>
     </TapGestureHandler>
     </AnimatedView>
     </PanGestureHandler>

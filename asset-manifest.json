@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.js": "/photocredz/static/js/main.faac261f.js",
+    "static/js/449.44729122.js": "/photocredz/static/js/449.44729122.js",
+    "static/media/background-image.png": "/photocredz/static/media/background-image.979cd8651f1550fd8cf0.png",
+    "static/media/MaterialIcons.ttf": "/photocredz/static/media/MaterialIcons.120b4c7bbd155bd0a04d.ttf",
+    "static/media/FontAwesome.ttf": "/photocredz/static/media/FontAwesome.1e59d2330b4c6deb84b3.ttf",
+    "static/media/emoji5.png": "/photocredz/static/media/emoji5.3ca0d7e3697bb4f720c7.png",
+    "static/media/emoji6.png": "/photocredz/static/media/emoji6.e2cad3fa2dc59d64cc4e.png",
+    "static/media/emoji2.png": "/photocredz/static/media/emoji2.5685d9a22d6660f57a1b.png",
+    "static/media/emoji3.png": "/photocredz/static/media/emoji3.d02b4d8049c9306be207.png",
+    "static/media/emoji4.png": "/photocredz/static/media/emoji4.9f86a388736b1b9772eb.png",
+    "static/media/emoji1.png": "/photocredz/static/media/emoji1.7df01aeee9beb5aa5910.png",
+    "favicon.ico": "/photocredz/favicon.ico",
+    "index.html": "/photocredz/index.html",
+    "favicon-32.png": "/photocredz/favicon-32.png",
+    "favicon-16.png": "/photocredz/favicon-16.png",
+    "manifest.json": "/photocredz/manifest.json",
+    "serve.json": "/photocredz/serve.json",
+    "main.faac261f.js.map": "/photocredz/static/js/main.faac261f.js.map",
+    "449.44729122.js.map": "/photocredz/static/js/449.44729122.js.map"
+  },
+  "entrypoints": [
+    "static/js/449.44729122.js",
+    "static/js/main.faac261f.js"
+  ]
+}

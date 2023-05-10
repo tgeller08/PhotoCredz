@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/photocredz/static/js/main.faac261f.js",
-    "static/js/449.44729122.js": "/photocredz/static/js/449.44729122.js",
+    "main.js": "/photocredz/static/js/main.8c14470b.js",
+    "static/js/552.87cdde10.js": "/photocredz/static/js/552.87cdde10.js",
     "static/media/background-image.png": "/photocredz/static/media/background-image.979cd8651f1550fd8cf0.png",
     "static/media/MaterialIcons.ttf": "/photocredz/static/media/MaterialIcons.120b4c7bbd155bd0a04d.ttf",
     "static/media/FontAwesome.ttf": "/photocredz/static/media/FontAwesome.1e59d2330b4c6deb84b3.ttf",
@@ -17,11 +17,11 @@
     "favicon-16.png": "/photocredz/favicon-16.png",
     "manifest.json": "/photocredz/manifest.json",
     "serve.json": "/photocredz/serve.json",
-    "main.faac261f.js.map": "/photocredz/static/js/main.faac261f.js.map",
-    "449.44729122.js.map": "/photocredz/static/js/449.44729122.js.map"
+    "main.8c14470b.js.map": "/photocredz/static/js/main.8c14470b.js.map",
+    "552.87cdde10.js.map": "/photocredz/static/js/552.87cdde10.js.map"
   },
   "entrypoints": [
-    "static/js/449.44729122.js",
-    "static/js/main.faac261f.js"
+    "static/js/552.87cdde10.js",
+    "static/js/main.8c14470b.js"
   ]
 }

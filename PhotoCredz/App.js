@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, Platform, Alert } from 'react-native';
+import { StyleSheet, Text, View, Image, Platform, Alert, Modal, TextInput, Pressable} from 'react-native';
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { captureRef } from 'react-native-view-shot';
 import domtoimage from 'dom-to-image';
@@ -13,6 +13,7 @@ import ImageViewer from './components/ImageViewer';
 import CircleButton from './components/CircleButton';
 import IconButton from './components/IconButton';
 import EmojiPicker from "./components/EmojiPicker";
+import CreditPrompter from "./components/CreditPrompter";
 import EmojiList from './components/EmojiList';
 import EmojiSticker from './components/EmojiSticker';
 import CreditSticker from './components/CreditSticker';
@@ -24,6 +25,7 @@ export default function App() {
   const [pickedCredit, setPickedCredit] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isCreditModalVisible, setIsCreditModalVisible] = useState(false);
   const [showAppOptions, setShowAppOptions] = useState(false);
   const [status, requestPermission] = MediaLibrary.usePermissions();
   const imageRef = useRef();
@@ -47,21 +49,35 @@ export default function App() {
     setPickedCredit(null)
     setPickedEmoji(null)
     setShowAppOptions(false);
+    console.log("Hi Tammy!");
+  };
+
+  const onAddCredit = () => {
+    setIsCreditModalVisible(true);
+    console.log("You clicked add credit!");
+    // Alert.prompt(
+    //   'Who took the photo?',
+    //   'Please enter the name:',
+    //   (text) => setPickedCredit(text),
+    //   undefined,
+      // 'default'
+  };
+
+  const handleInputValueChange = (value) => {
+    setPickedCredit(value);
+  };
+
+
+
+  const onCreditModalClose = () => {
+    setIsCreditModalVisible(false);
+    console.log("You closed the credit!");
   };
 
   const onAddSticker = () => {
     setIsModalVisible(true);
   };
 
-  const onAddCredit = () => {
-    Alert.prompt(
-      'Who took the photo?',
-      'Please enter the name:',
-      (text) => setPickedCredit(text),
-      undefined,
-      // 'default'
-    );
-  };
 
   const onModalClose = () => {
     setIsModalVisible(false);
@@ -136,6 +152,16 @@ export default function App() {
       <EmojiPicker isVisible={isModalVisible} onClose={onModalClose}>
         <EmojiList onSelect={setPickedEmoji} onCloseModal={onModalClose} />
       </EmojiPicker>
+      <Modal animationType="slide" transparent={true} visible={isCreditModalVisible} onRequestClose={onCreditModalClose}>
+        <View style={styles.modalContent}>
+          <TextInput 
+            style={styles.input}
+            placeholder="Insert Name Here"
+            value={pickedCredit}
+            onChangeText={handleInputValueChange} />
+          <Button theme="exit" label="Save" onPress={onCreditModalClose}/>
+        </View>
+      </Modal>
       <StatusBar style="light" />
     </GestureHandlerRootView>
   );
@@ -167,5 +193,30 @@ const styles = StyleSheet.create({
   optionsRow: {
     alignItems: 'center',
     flexDirection: 'row',
+  },
+  modalContent: {
+    height: '25%',
+    width: '100%',
+    backgroundColor: '#e1dfdb',
+    borderTopRightRadius: 18,
+    borderTopLeftRadius: 18,
+    position: 'absolute',
+    bottom: 0,
+  },
+  input: {
+    height: 40,
+    margin: 12,
+    borderRadius: 0, 
+    padding: 10,
+    backgroundColor: '#eee',
+    borderColor: 'gray',
+    color: 'black',
+    fontSize: 16,
+    fontWeight: 'normal',
+    padding: 10,
+    textAlign: 'left',
+    textAlignVertical: 'top',
+    textDecorationLine: 'none',
+    textTransform: 'none',
   },
 });

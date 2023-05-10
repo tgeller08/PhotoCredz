@@ -23,6 +23,16 @@ export default function Button({ label, theme, onPress }) {
     );
   }
 
+  if (theme === "exit") {
+    return (
+      <View style={styles.buttonContainer}>
+        <Pressable style={[styles.button, { backgroundColor: "#eee" }]} onPress={onPress}>
+          <Text style={[styles.buttonLabel, { color: "#25292e" }]}>{label}</Text>
+        </Pressable>
+      </View>
+    );
+  }
+
   return (
     <View style={styles.buttonContainer}>
         <Pressable style={styles.button} onPress={onPress}>

@@ -2,7 +2,7 @@
   "name": "photocredz",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
-  "homepage": "http://tgeller08.github.io/photocredz",
+  "homepage": "http://tgeller08.github.io/PhotoCredz",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",

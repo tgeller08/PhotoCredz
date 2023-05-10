@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/PhotoCredz/static/js/main.a35e8884.js",
-    "static/js/449.586dd511.js": "/PhotoCredz/static/js/449.586dd511.js",
+    "main.js": "/PhotoCredz/static/js/main.9f6e8124.js",
+    "static/js/552.cf445041.js": "/PhotoCredz/static/js/552.cf445041.js",
     "static/media/background-image.png": "/PhotoCredz/static/media/background-image.979cd8651f1550fd8cf0.png",
     "static/media/MaterialIcons.ttf": "/PhotoCredz/static/media/MaterialIcons.120b4c7bbd155bd0a04d.ttf",
     "static/media/FontAwesome.ttf": "/PhotoCredz/static/media/FontAwesome.1e59d2330b4c6deb84b3.ttf",
@@ -17,11 +17,11 @@
     "favicon-16.png": "/PhotoCredz/favicon-16.png",
     "manifest.json": "/PhotoCredz/manifest.json",
     "serve.json": "/PhotoCredz/serve.json",
-    "main.a35e8884.js.map": "/PhotoCredz/static/js/main.a35e8884.js.map",
-    "449.586dd511.js.map": "/PhotoCredz/static/js/449.586dd511.js.map"
+    "main.9f6e8124.js.map": "/PhotoCredz/static/js/main.9f6e8124.js.map",
+    "552.cf445041.js.map": "/PhotoCredz/static/js/552.cf445041.js.map"
   },
   "entrypoints": [
-    "static/js/449.586dd511.js",
-    "static/js/main.a35e8884.js"
+    "static/js/552.cf445041.js",
+    "static/js/main.9f6e8124.js"
   ]
 }

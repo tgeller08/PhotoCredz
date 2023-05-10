@@ -106,38 +106,39 @@ export default function App() {
   }
 
   return (
-    <GestureHandlerRootView style={styles.container}>
-       <View style={styles.imageContainer}>
-        <View ref={imageRef} collapsable={false}>
-       <ImageViewer
-          placeholderImageSource={PlaceholderImage}
-          selectedImage={selectedImage}
-        />
-        {pickedEmoji !== null ? <EmojiSticker imageSize={40} stickerSource={pickedEmoji} /> : null}
-        {pickedCredit !== null ? <CreditSticker imageSize={40} creditSource={pickedCredit} /> : null}
-        </View>
-      </View>
-      {showAppOptions ? (
-        <View style={styles.optionsContainer}>
-        <View style={styles.optionsRow}>
-          <IconButton icon="refresh" label="Reset" onPress={onReset} />
-          <IconButton icon="brush" label="Add Sticker" onPress={onAddSticker} />
-          <IconButton icon="edit" label="Add Credit" onPress={onAddCredit} />
-          {/* <CircleButton onPress={onAddSticker} /> */}
-          <IconButton icon="save-alt" label="Save" onPress={onSaveImageAsync} />
-        </View>
-      </View>
-      ) : (
-      <View style={styles.footerContainer}>
-        <Button theme="primary" label="Choose a photo" onPress={pickImageAsync}/>
-        <Button label="Use this photo" onPress={() => setShowAppOptions(true)} />
-      </View>
-      )}
-      <EmojiPicker isVisible={isModalVisible} onClose={onModalClose}>
-        <EmojiList onSelect={setPickedEmoji} onCloseModal={onModalClose} />
-      </EmojiPicker>
-      <StatusBar style="light" />
-    </GestureHandlerRootView>
+    <Text>Hello</Text>
+    // <GestureHandlerRootView style={styles.container}>
+    //    <View style={styles.imageContainer}>
+    //     <View ref={imageRef} collapsable={false}>
+    //    <ImageViewer
+    //       placeholderImageSource={PlaceholderImage}
+    //       selectedImage={selectedImage}
+    //     />
+    //     {pickedEmoji !== null ? <EmojiSticker imageSize={40} stickerSource={pickedEmoji} /> : null}
+    //     {pickedCredit !== null ? <CreditSticker imageSize={40} creditSource={pickedCredit} /> : null}
+    //     </View>
+    //   </View>
+    //   {showAppOptions ? (
+    //     <View style={styles.optionsContainer}>
+    //     <View style={styles.optionsRow}>
+    //       <IconButton icon="refresh" label="Reset" onPress={onReset} />
+    //       <IconButton icon="brush" label="Add Sticker" onPress={onAddSticker} />
+    //       <IconButton icon="edit" label="Add Credit" onPress={onAddCredit} />
+    //       {/* <CircleButton onPress={onAddSticker} /> */}
+    //       <IconButton icon="save-alt" label="Save" onPress={onSaveImageAsync} />
+    //     </View>
+    //   </View>
+    //   ) : (
+    //   <View style={styles.footerContainer}>
+    //     <Button theme="primary" label="Choose a photo" onPress={pickImageAsync}/>
+    //     <Button label="Use this photo" onPress={() => setShowAppOptions(true)} />
+    //   </View>
+    //   )}
+    //   <EmojiPicker isVisible={isModalVisible} onClose={onModalClose}>
+    //     <EmojiList onSelect={setPickedEmoji} onCloseModal={onModalClose} />
+    //   </EmojiPicker>
+    //   <StatusBar style="light" />
+    // </GestureHandlerRootView>
   );
 }
 
